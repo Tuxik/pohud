@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:RegexModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://www.crotonresearch.com/graphrex/model" xmlns:tree="http://crotonresearch.com/graphrex/model/tree" id="w14333411782560" regexTextBytes="FEFF0028003F006D0029002E002A00480061006E006400490064003A002000280023005B0030002D0039005D007B00310036007D002D005B0030002D0039005D002D005B0030002D0039005D007B00310030007D0029002E002A" start="w1433341398538179" finish="w1433341398538180">
+  <nodes xsi:type="model:StartNode" name="Start" id="w1433341398538179" comment="Start" title="Start" x="25" y="72" width="15" height="17">
+    <outputs name="output" id="w1433341398538181" edges="w1433341398538182"/>
+    <inputs name="input" id="w1433341398538183"/>
+  </nodes>
+  <nodes xsi:type="model:MatchFlagsNode" name="Match flags node" id="w1433341398538184" startLine="0" startPos="0" stopLine="0" stopPos="3" comment="Match flags node" x="65" y="72" width="60" height="18">
+    <outputs name="output" id="w1433341398538185" edges="w1433341398538186"/>
+    <inputs name="input" id="w1433341398538187" edges="w1433341398538182"/>
+    <matchFlags name="Match flags" id="w1433341398538188" multiLine="ON"/>
+  </nodes>
+  <nodes xsi:type="model:Quantifier" name="Quantifier" id="w1433341398538189" startLine="0" startPos="4" stopLine="0" stopPos="5" comment="Quantifier" x="150" y="50" width="126" height="49">
+    <outputs name="output" id="w1433341398538190" edges="w1433341398538191"/>
+    <inputs name="input" id="w1433341398538192" edges="w1433341398538186"/>
+    <wrappedNode xsi:type="model:CharacterSetNode" name="Character set" id="w1433341398538193" startLine="0" startPos="4" stopLine="0" stopPos="4" x="12" y="0" width="62" height="18">
+      <treeRoot xsi:type="tree:SetNode" id="w1433341398538194" startLine="0" startPos="4" stopLine="0" stopPos="4" summaryBytes="FEFF00280041006E00790029">
+        <charSet xsi:type="model:PredefinedCharacterSet" id="w1433341398538195">
+          <configuration id="w1433341398538196" type="DOT_DEFAULT"/>
+        </charSet>
+      </treeRoot>
+    </wrappedNode>
+    <repetition id="w1433341398538197" startLine="0" startPos="5" stopLine="0" stopPos="5"/>
+  </nodes>
+  <nodes xsi:type="model:StringMatchBox" name="String" id="w1433341398538198" startLine="0" startPos="6" stopLine="0" stopPos="13" x="301" y="70" width="57" height="20" matchStringBytes="FEFF00480061006E006400490064003A0020">
+    <outputs name="output" id="w1433341398538199" edges="w1433341398538200"/>
+    <inputs name="input" id="w1433341398538201" edges="w1433341398538191"/>
+  </nodes>
+  <nodes xsi:type="model:GroupBox" id="w1433341398538202" startLine="0" startPos="14" stopLine="0" stopPos="41" x="383" y="15" width="536" height="85" groupType="CAPTURE" groupNumber="1">
+    <outputs name="output" id="w1433341398538203" edges="w1433341398538204"/>
+    <inputs name="input" id="w1433341398538205" edges="w1433341398538200"/>
+    <container name="Contents" id="w1433341398538206" x="0" y="16" width="534" height="67" referenceDepth="48">
+      <subModel id="w1433341398538207" start="w1433341398538208" finish="w1433341398538209">
+        <nodes xsi:type="model:StartNode" name="Start" id="w1433341398538208" comment="Start" title="Start" x="0" y="48" width="0" height="0">
+          <outputs name="output" id="w1433341398538210" edges="w1433341398538211"/>
+          <inputs name="input" id="w1433341398538212"/>
+        </nodes>
+        <nodes xsi:type="model:StringMatchBox" name="String" id="w1433341398538213" startLine="0" startPos="15" stopLine="0" stopPos="15" x="25" y="38" width="25" height="20" matchStringBytes="FEFF0023">
+          <outputs name="output" id="w1433341398538214" edges="w1433341398538215"/>
+          <inputs name="input" id="w1433341398538216" edges="w1433341398538211"/>
+        </nodes>
+        <nodes xsi:type="model:Quantifier" name="Quantifier" id="w1433341398538217" startLine="0" startPos="16" stopLine="0" stopPos="24" comment="Quantifier" x="75" y="15" width="110" height="42">
+          <outputs name="output" id="w1433341398538218" edges="w1433341398538219"/>
+          <inputs name="input" id="w1433341398538220" edges="w1433341398538215"/>
+          <wrappedNode xsi:type="model:CharacterSetNode" name="Character set" id="w1433341398538221" startLine="0" startPos="16" stopLine="0" stopPos="20">
+            <treeRoot xsi:type="tree:SetNode" id="w1433341398538222" startLine="0" startPos="17" stopLine="0" stopPos="19" summaryBytes="FEFF0030002D0039">
+              <charSet xsi:type="model:RangeCharacterSet" id="w1433341398538223" beginChar="48" endChar="57"/>
+            </treeRoot>
+          </wrappedNode>
+          <repetition id="w1433341398538224" startLine="0" startPos="21" stopLine="0" stopPos="24" type="Numeric" n="16"/>
+        </nodes>
+        <nodes xsi:type="model:StringMatchBox" name="String" id="w1433341398538225" startLine="0" startPos="25" stopLine="0" stopPos="25" x="210" y="38" width="25" height="20" matchStringBytes="FEFF002D">
+          <outputs name="output" id="w1433341398538226" edges="w1433341398538227"/>
+          <inputs name="input" id="w1433341398538228" edges="w1433341398538219"/>
+        </nodes>
+        <nodes xsi:type="model:CharacterSetNode" name="Character set" id="w1433341398538229" startLine="0" startPos="26" stopLine="0" stopPos="30" x="260" y="39" width="62" height="18">
+          <outputs name="output" id="w1433341398538230" edges="w1433341398538231"/>
+          <inputs name="input" id="w1433341398538232" edges="w1433341398538227"/>
+          <treeRoot xsi:type="tree:SetNode" id="w1433341398538233" startLine="0" startPos="27" stopLine="0" stopPos="29" summaryBytes="FEFF0030002D0039">
+            <charSet xsi:type="model:RangeCharacterSet" id="w1433341398538234" beginChar="48" endChar="57"/>
+          </treeRoot>
+        </nodes>
+        <nodes xsi:type="model:StringMatchBox" name="String" id="w1433341398538235" startLine="0" startPos="31" stopLine="0" stopPos="31" x="347" y="38" width="25" height="20" matchStringBytes="FEFF002D">
+          <outputs name="output" id="w1433341398538236" edges="w1433341398538237"/>
+          <inputs name="input" id="w1433341398538238" edges="w1433341398538231"/>
+        </nodes>
+        <nodes xsi:type="model:Quantifier" name="Quantifier" id="w1433341398538239" startLine="0" startPos="32" stopLine="0" stopPos="40" comment="Quantifier" x="397" y="15" width="110" height="42">
+          <outputs name="output" id="w1433341398538240" edges="w1433341398538241"/>
+          <inputs name="input" id="w1433341398538242" edges="w1433341398538237"/>
+          <wrappedNode xsi:type="model:CharacterSetNode" name="Character set" id="w1433341398538243" startLine="0" startPos="32" stopLine="0" stopPos="36">
+            <treeRoot xsi:type="tree:SetNode" id="w1433341398538244" startLine="0" startPos="33" stopLine="0" stopPos="35" summaryBytes="FEFF0030002D0039">
+              <charSet xsi:type="model:RangeCharacterSet" id="w1433341398538245" beginChar="48" endChar="57"/>
+            </treeRoot>
+          </wrappedNode>
+          <repetition id="w1433341398538246" startLine="0" startPos="37" stopLine="0" stopPos="40" type="Numeric" n="10"/>
+        </nodes>
+        <nodes xsi:type="model:FinishNode" name="Finish" id="w1433341398538209" comment="Finish" title="Finish" x="532" y="48" width="0" height="0">
+          <outputs name="output" id="w1433341398538247"/>
+          <inputs name="input" id="w1433341398538248" edges="w1433341398538241"/>
+        </nodes>
+        <edges id="w1433341398538211" target="w1433341398538216" source="w1433341398538210"/>
+        <edges id="w1433341398538215" target="w1433341398538220" source="w1433341398538214"/>
+        <edges id="w1433341398538219" target="w1433341398538228" source="w1433341398538218"/>
+        <edges id="w1433341398538227" target="w1433341398538232" source="w1433341398538226"/>
+        <edges id="w1433341398538231" target="w1433341398538238" source="w1433341398538230"/>
+        <edges id="w1433341398538237" target="w1433341398538242" source="w1433341398538236"/>
+        <edges id="w1433341398538241" target="w1433341398538248" source="w1433341398538240"/>
+      </subModel>
+    </container>
+  </nodes>
+  <nodes xsi:type="model:Quantifier" name="Quantifier" id="w1433341398538249" startLine="0" startPos="42" stopLine="0" stopPos="43" comment="Quantifier" x="944" y="50" width="126" height="49">
+    <outputs name="output" id="w1433341398538250" edges="w1433341398538251"/>
+    <inputs name="input" id="w1433341398538252" edges="w1433341398538204"/>
+    <wrappedNode xsi:type="model:CharacterSetNode" name="Character set" id="w1433341398538253" startLine="0" startPos="42" stopLine="0" stopPos="42">
+      <treeRoot xsi:type="tree:SetNode" id="w1433341398538254" startLine="0" startPos="42" stopLine="0" stopPos="42" summaryBytes="FEFF00280041006E00790029">
+        <charSet xsi:type="model:PredefinedCharacterSet" id="w1433341398538255">
+          <configuration id="w1433341398538256" type="DOT_DEFAULT"/>
+        </charSet>
+      </treeRoot>
+    </wrappedNode>
+    <repetition id="w1433341398538257" startLine="0" startPos="43" stopLine="0" stopPos="43"/>
+  </nodes>
+  <nodes xsi:type="model:FinishNode" name="Finish" id="w1433341398538180" comment="Finish" title="Finish" x="1095" y="72" width="15" height="17">
+    <outputs name="output" id="w1433341398538258"/>
+    <inputs name="input" id="w1433341398538259" edges="w1433341398538251"/>
+  </nodes>
+  <edges id="w1433341398538182" target="w1433341398538187" source="w1433341398538181"/>
+  <edges id="w1433341398538186" target="w1433341398538192" source="w1433341398538185"/>
+  <edges id="w1433341398538191" target="w1433341398538201" source="w1433341398538190"/>
+  <edges id="w1433341398538200" target="w1433341398538205" source="w1433341398538199"/>
+  <edges id="w1433341398538204" target="w1433341398538252" source="w1433341398538203"/>
+  <edges id="w1433341398538251" target="w1433341398538259" source="w1433341398538250"/>
+</model:RegexModel>
